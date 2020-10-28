@@ -22,20 +22,22 @@
     var CONFIG = {"hostname":"siqi-dong.github.io","root":"/","scheme":"Mist","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="123456789101112131415# -*- coding: utf-8 -*-import osdef addAsciiHeadFile(asciiFolder):    rootdir &#x3D; os.path.join(asciiFolder)    for (dirpath, dirnames, filenames) in os.walk(rootdir):        for fil">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950# -*- coding: utf-8 -*-import arcpyfrom arcpy import envfrom arcpy.sa import *arcpy.CheckOutExtension(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Add head file to ascill">
-<meta property="og:url" content="http://siqi-dong.github.io/2020/10/20/Add-head-file-to-ascill/index.html">
+<meta property="og:title" content="Get the water depth and volume of flood inundation by water level">
+<meta property="og:url" content="http://siqi-dong.github.io/2020/10/28/Get-the-water-depth-and-volume-of-flood-inundation-by-water-level/index.html">
 <meta property="og:site_name" content="Siqi Dong&#39;s Blog">
-<meta property="og:description" content="123456789101112131415# -*- coding: utf-8 -*-import osdef addAsciiHeadFile(asciiFolder):    rootdir &#x3D; os.path.join(asciiFolder)    for (dirpath, dirnames, filenames) in os.walk(rootdir):        for fil">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950# -*- coding: utf-8 -*-import arcpyfrom arcpy import envfrom arcpy.sa import *arcpy.CheckOutExtension(">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-20T07:15:58.000Z">
-<meta property="article:modified_time" content="2020-10-22T03:51:28.744Z">
+<meta property="og:image" content="http://siqi-dong.github.io/2020/10/28/Get-the-water-depth-and-volume-of-flood-inundation-by-water-level/WaterDepth.png">
+<meta property="article:published_time" content="2020-10-28T14:58:53.000Z">
+<meta property="article:modified_time" content="2020-10-28T15:10:15.592Z">
 <meta property="article:author" content="Siqi Dong">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://siqi-dong.github.io/2020/10/28/Get-the-water-depth-and-volume-of-flood-inundation-by-water-level/WaterDepth.png">
 
 
-<link rel="canonical" href="http://siqi-dong.github.io/2020/10/20/Add-head-file-to-ascill/">
+<link rel="canonical" href="http://siqi-dong.github.io/2020/10/28/Get-the-water-depth-and-volume-of-flood-inundation-by-water-level/">
 
 
 <script class="page-configurations">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>Add head file to ascill | Siqi Dong's Blog</title>
+  <title>Get the water depth and volume of flood inundation by water level | Siqi Dong's Blog</title>
   
 
 
@@ -275,7 +277,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://siqi-dong.github.io/2020/10/20/Add-head-file-to-ascill/">
+    <link itemprop="mainEntityOfPage" href="http://siqi-dong.github.io/2020/10/28/Get-the-water-depth-and-volume-of-flood-inundation-by-water-level/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -288,7 +290,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Add head file to ascill
+          Get the water depth and volume of flood inundation by water level
         </h1>
 
         <div class="post-meta-container">
@@ -298,23 +300,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2020-10-20 15:15:58" itemprop="dateCreated datePublished" datetime="2020-10-20T15:15:58+08:00">2020-10-20</time>
+      <time title="Created: 2020-10-28 22:58:53 / Modified: 23:10:15" itemprop="dateCreated datePublished" datetime="2020-10-28T22:58:53+08:00">2020-10-28</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-22 11:51:28" itemprop="dateModified" datetime="2020-10-22T11:51:28+08:00">2020-10-22</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/TextFile/" itemprop="url" rel="index"><span itemprop="name">TextFile</span></a>
+          <a href="/categories/DataAnalysis/" itemprop="url" rel="index"><span itemprop="name">DataAnalysis</span></a>
         </span>
     </span>
 
@@ -351,7 +347,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addAsciiHeadFile</span>(<span class="params">asciiFolder</span>):</span></span><br><span class="line">    rootdir = os.path.join(asciiFolder)</span><br><span class="line">    <span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(rootdir):</span><br><span class="line">        <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">            <span class="keyword">if</span> os.path.splitext(filename)[<span class="number">1</span>] == <span class="string">&#x27;.txt&#x27;</span>:</span><br><span class="line">                asciiPath=asciiFolder+<span class="string">&quot;\\&quot;</span>+filename</span><br><span class="line">                <span class="keyword">with</span> open(asciiPath, <span class="string">&#x27;r+&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                    content = f.read()</span><br><span class="line">                    f.seek(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">                    <span class="comment"># head file content</span></span><br><span class="line">                    f.write(<span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + content)</span><br><span class="line">                    <span class="keyword">print</span> asciiPath + <span class="string">&quot;done!&quot;</span></span><br></pre></td></tr></table></figure>
+         <div style="margin: 0 auto;overflow: hidden;">
+ <img src="/2020/10/28/Get-the-water-depth-and-volume-of-flood-inundation-by-water-level/WaterDepth.png" alt>
+ </div>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> arcpy</span><br><span class="line"><span class="keyword">from</span> arcpy <span class="keyword">import</span> env</span><br><span class="line"><span class="keyword">from</span> arcpy.sa <span class="keyword">import</span> *</span><br><span class="line">arcpy.CheckOutExtension(<span class="string">&quot;Spatial&quot;</span>)</span><br><span class="line"><span class="comment"># Workspace</span></span><br><span class="line">env.workspace = <span class="string">&quot;&quot;</span></span><br><span class="line">env.overwriteOutput = <span class="literal">True</span></span><br><span class="line"><span class="comment"># Dem data path</span></span><br><span class="line">dem=<span class="string">&quot;XXX\\xx.tif&quot;</span></span><br><span class="line">cellXSzie = float(arcpy.GetRasterProperties_management(dem, <span class="string">&quot;CELLSIZEX&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">cellYSzie = float(arcpy.GetRasterProperties_management(dem, <span class="string">&quot;CELLSIZEY&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">maxdem=float(arcpy.GetRasterProperties_management(dem,<span class="string">&quot;MAXIMUM&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">mindem=float(arcpy.GetRasterProperties_management(dem,<span class="string">&quot;MINIMUM&quot;</span>)[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getValueSum</span>(<span class="params">raster</span>):</span></span><br><span class="line">    sum=<span class="number">0</span></span><br><span class="line">    rstArray = arcpy.RasterToNumPyArray(raster)</span><br><span class="line">    rows, cols = rstArray.shape</span><br><span class="line">    <span class="keyword">for</span> rowNum <span class="keyword">in</span> xrange(rows):</span><br><span class="line">        <span class="keyword">for</span> colNum <span class="keyword">in</span> xrange(cols):</span><br><span class="line">            s=rstArray.item(rowNum, colNum)</span><br><span class="line">            sum=sum+s</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculation of the volume and extent of inundation based on water levels</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getVandRaster</span>(<span class="params">cellxsize,cellysize,h,V_threshold</span>):</span></span><br><span class="line">    inRaster = Raster(dem)</span><br><span class="line">    <span class="comment"># Water depth raster</span></span><br><span class="line">    deepRaster = Con(inRaster&lt;=h, h-inRaster, <span class="number">0</span>)</span><br><span class="line">    deepRaster2 = SetNull(deepRaster == <span class="number">0</span>,deepRaster)</span><br><span class="line">    <span class="comment"># Volume of water</span></span><br><span class="line">    Vraster=deepRaster*cellxsize*cellysize</span><br><span class="line">    Vraster2=Con(IsNull(Vraster),<span class="number">0</span>,Vraster)</span><br><span class="line">    <span class="comment"># Sum</span></span><br><span class="line">    V=getValueSum(Vraster2)</span><br><span class="line">    <span class="comment"># Threshold of volume</span></span><br><span class="line">    <span class="keyword">if</span> V&gt;=V_threshold:</span><br><span class="line">        deepRaster2.save(<span class="string">&quot;Level&quot;</span>+str(h)+<span class="string">&quot;m_Volume&quot;</span>+str(V)+<span class="string">&quot;m3.tif&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">h=mindem</span><br><span class="line">step=<span class="number">0.1</span></span><br><span class="line"><span class="keyword">while</span> h&lt;maxdem:</span><br><span class="line">    <span class="keyword">if</span> getVandRaster(cellXSzie,cellYSzie,h)==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        h=h+step</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -382,14 +382,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/10/20/Mosaic-to-new-raster/" rel="prev" title="Mosaic to new raster">
-                  <i class="fa fa-chevron-left"></i> Mosaic to new raster
+                <a href="/2020/10/27/Batch-download-Sentinel-data-from-ESA-Copernicus-Data-Centre/" rel="prev" title="Batch download Sentinel data from ESA Copernicus Data Centre">
+                  <i class="fa fa-chevron-left"></i> Batch download Sentinel data from ESA Copernicus Data Centre
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/10/21/Get%20sum%20or%20mean%20from%20rasters/" rel="next" title="Get sum or mean from rasters">
-                  Get sum or mean from rasters <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -578,7 +575,7 @@ NexT.utils.loadComments('#gitalk-container', () => {
       repo        : 'comment-gitalk',
       owner       : 'Siqi-Dong',
       admin       : ['Siqi Dong'],
-      id          : '1bf975040dc839e09d01ce264022c007',
+      id          : '62726a32b9a8aeef35d07e175665281b',
         language: '',
       distractionFreeMode: true
     });
