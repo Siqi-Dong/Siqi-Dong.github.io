@@ -22,18 +22,20 @@
     var CONFIG = {"hostname":"siqi-dong.github.io","root":"/","scheme":"Mist","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Data and tool support for GISer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Siqi Dong&#39;s Blog">
-<meta property="og:url" content="http://siqi-dong.github.io/archives/2020/11/index.html">
+  <meta name="description" content="&#96;&#96;&#96;python -- coding: utf-8 --import tifffile as tiffimport mathimport numpyfrom itertools import chainimg &#x3D; tiff.imread(‘tiffilePath’)listImg &#x3D; list(chain.from_iterable(img)) Filter out negative numbe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Get the quantile of raster image">
+<meta property="og:url" content="http://siqi-dong.github.io/2022/07/27/Get%20the%20quantile%20of%20raster%20image/index.html">
 <meta property="og:site_name" content="Siqi Dong&#39;s Blog">
-<meta property="og:description" content="Data and tool support for GISer">
+<meta property="og:description" content="&#96;&#96;&#96;python -- coding: utf-8 --import tifffile as tiffimport mathimport numpyfrom itertools import chainimg &#x3D; tiff.imread(‘tiffilePath’)listImg &#x3D; list(chain.from_iterable(img)) Filter out negative numbe">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-07-27T01:07:00.000Z">
+<meta property="article:modified_time" content="2022-07-27T01:28:56.752Z">
 <meta property="article:author" content="Siqi Dong">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://siqi-dong.github.io/archives/2020/11/">
+<link rel="canonical" href="http://siqi-dong.github.io/2022/07/27/Get%20the%20quantile%20of%20raster%20image/">
 
 
 <script class="page-configurations">
@@ -41,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Siqi Dong's Blog</title>
+  <title>Get the quantile of raster image | Siqi Dong's Blog</title>
   
 
 
@@ -190,7 +192,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -202,6 +204,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#coding-utf-8"><span class="nav-number">1.</span> <span class="nav-text">-- coding: utf-8 --</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Filter-out-negative-numbers-optional"><span class="nav-number">2.</span> <span class="nav-text">Filter out negative numbers (optional)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5th-percentile"><span class="nav-number">3.</span> <span class="nav-text">5th percentile</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#95th-percentile"><span class="nav-number">4.</span> <span class="nav-text">95th percentile</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -260,137 +263,143 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
       
 
       
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 25 posts in total. Keep on posting.</span>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://siqi-dong.github.io/2022/07/27/Get%20the%20quantile%20of%20raster%20image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Siqi Dong">
+      <meta itemprop="description" content="Data and tool support for GISer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Siqi Dong's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Get the quantile of raster image
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-07-27 09:07:00 / Modified: 09:28:56" itemprop="dateCreated datePublished" datetime="2022-07-27T09:07:00+08:00">2022-07-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DataProperties/" itemprop="url" rel="index"><span itemprop="name">DataProperties</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
       </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>451</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
+</div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>```python</p>
+<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding: utf-8 --"></a>-<em>- coding: utf-8 -</em>-</h1><p>import tifffile as tiff<br>import math<br>import numpy<br>from itertools import chain<br>img = tiff.imread(‘tiffilePath’)<br>listImg = list(chain.from_iterable(img))</p>
+<h1 id="Filter-out-negative-numbers-optional"><a href="#Filter-out-negative-numbers-optional" class="headerlink" title="Filter out negative numbers (optional)"></a>Filter out negative numbers (optional)</h1><p>x = numpy.array([num for num in listImg if num &gt;= 0])<br>def percentile(data, perc: int):<br>    size = len(data)<br>    return sorted(data)[int(math.ceil((size * perc) / 100)) - 1]</p>
+<h1 id="5th-percentile"><a href="#5th-percentile" class="headerlink" title="5th percentile"></a>5th percentile</h1><p>print(“5th percentile：”+str(percentile(x, 5)))</p>
+<h1 id="95th-percentile"><a href="#95th-percentile" class="headerlink" title="95th percentile"></a>95th percentile</h1><p>print(“95th percentile：”+str(percentile(x, 95)))</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-23T21:08:20+08:00"
-              content="2020-11-23">
-          11-23
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>I just want to buy Latiao !</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Siqi Dong WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Siqi Dong Alipay">
+        <span>Alipay</span>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/23/LandScan-global-population-distribution-data/" itemprop="url">
-            <span itemprop="name">LandScan global population distribution data</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-12T23:12:33+08:00"
-              content="2020-11-12">
-          11-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/12/ArcGIS-Software-ISO/" itemprop="url">
-            <span itemprop="name">ArcGIS Software ISO</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-11T20:39:59+08:00"
-              content="2020-11-11">
-          11-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/11/Non%20source%20inundated%20analysis%20based%20on%20specified%20amount%20of%20water/" itemprop="url">
-            <span itemprop="name">Non source inundated analysis based on specified amount of water</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-11T19:39:44+08:00"
-              content="2020-11-11">
-          11-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/11/Source%20inundated%20analysis/" itemprop="url">
-            <span itemprop="name">Source inundated analysis</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-01T22:15:44+08:00"
-              content="2020-11-01">
-          11-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/01/Batch-calculation-of-NDWI-and-extraction-of-water-body-from-Landsat-8-OLI-data/" itemprop="url">
-            <span itemprop="name">Batch calculation of NDWI and extraction of water body from Landsat 8 OLI data</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
-  
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/23/LandScan-global-population-distribution-data/" rel="prev" title="LandScan global population distribution data">
+                  <i class="fa fa-chevron-left"></i> LandScan global population distribution data
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
 
 
 
       
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -555,6 +564,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '2b11dc5e694928f8f0fa',
+      clientSecret: '1d4c9e0f4bc49d59d0a990ffdd93f47c66b8a022',
+      repo        : 'comments-gitalk',
+      owner       : 'Siqi-Dong',
+      admin       : ['Siqi-Dong'],
+      id          : '69f8fee86758d9115f2c02910183af76',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

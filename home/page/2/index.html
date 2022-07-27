@@ -215,7 +215,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -264,6 +264,100 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://siqi-dong.github.io/2020/10/25/Get-POI-data-from-Baidu-Map/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Siqi Dong">
+      <meta itemprop="description" content="Data and tool support for GISer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Siqi Dong's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/25/Get-POI-data-from-Baidu-Map/" class="post-title-link" itemprop="url">Get POI data from Baidu Map</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2020-10-25 21:59:32 / Modified: 22:14:24" itemprop="dateCreated datePublished" datetime="2020-10-25T21:59:32+08:00">2020-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DataCollection/" itemprop="url" rel="index"><span itemprop="name">DataCollection</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>89</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Baidu-Map-POI-Industry-Classification"><a href="#Baidu-Map-POI-Industry-Classification" class="headerlink" title="Baidu Map POI Industry Classification"></a>Baidu Map POI Industry Classification</h3><h4 id="http-lbsyun-baidu-com-index-php-title-lbscloud-poitags"><a href="#http-lbsyun-baidu-com-index-php-title-lbscloud-poitags" class="headerlink" title="http://lbsyun.baidu.com/index.php?title=lbscloud/poitags"></a><a target="_blank" rel="noopener" href="http://lbsyun.baidu.com/index.php?title=lbscloud/poitags">http://lbsyun.baidu.com/index.php?title=lbscloud/poitags</a></h4> <div style="margin: 0 auto;overflow: hidden;">
+ <img src="/2020/10/25/Get-POI-data-from-Baidu-Map/POIClass.png" alt>
+ </div>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getPOIFromBaiduMap</span>(<span class="params">lat_1,lon_1,lat_2,lon_2,las,keyword,excelSaveFolder</span>):</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="comment"># Your BaiduMap API Key</span></span><br><span class="line">    ak = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    keynew = str(urllib.parse.quote(keyword))</span><br><span class="line">    push = excelSaveFolder+<span class="string">&#x27;\\&#x27;</span>+keyword+<span class="string">&#x27;.xls&#x27;</span></span><br><span class="line">    f = open(push, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">    lat_count = int((lat_2 - lat_1) / las + <span class="number">1</span>)</span><br><span class="line">    lon_count = int((lon_2 - lon_1) / las + <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> lat_c <span class="keyword">in</span> range(<span class="number">0</span>, lat_count):</span><br><span class="line">        lat_b1 = lat_1 + las * lat_c</span><br><span class="line">        <span class="keyword">for</span> lon_c <span class="keyword">in</span> range(<span class="number">0</span>, lon_count):</span><br><span class="line">            lon_b1 = lon_1 + las * lon_c</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">20</span>):</span><br><span class="line">                page_num = str(i)</span><br><span class="line">                url = <span class="string">r&#x27;http://api.map.baidu.com/place/v2/search?query=&#x27;</span> + keynew + <span class="string">&#x27;&amp;bounds=&#x27;</span> + str(lat_b1) + <span class="string">&#x27;,&#x27;</span> + str(lon_b1) + <span class="string">&#x27;,&#x27;</span> + str(lat_b1 + las) + <span class="string">&#x27;,&#x27;</span> + str(lon_b1 + las) + <span class="string">&#x27;&amp;page_size=20&amp;page_num=&#x27;</span> + str(page_num) + <span class="string">&#x27;&amp;output=json&amp;ak=&#x27;</span> + ak</span><br><span class="line">                count=count+<span class="number">1</span></span><br><span class="line">                print(str(count))</span><br><span class="line">                response = urllib.request.urlopen(url)</span><br><span class="line">                data = json.load(response)</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    <span class="keyword">for</span> item <span class="keyword">in</span> data[<span class="string">&#x27;results&#x27;</span>]:</span><br><span class="line">                        jname = item[<span class="string">&#x27;name&#x27;</span>]</span><br><span class="line">                        print(jname)</span><br><span class="line">                        jlat = item[<span class="string">&#x27;location&#x27;</span>][<span class="string">&#x27;lat&#x27;</span>]</span><br><span class="line">                        jlon = item[<span class="string">&#x27;location&#x27;</span>][<span class="string">&#x27;lng&#x27;</span>]</span><br><span class="line">                        jadd = item[<span class="string">&#x27;address&#x27;</span>]</span><br><span class="line">                        j_str = jname + <span class="string">&#x27;,&#x27;</span> + str(jlat) + <span class="string">&#x27;,&#x27;</span> + str(jlon) + <span class="string">&#x27;,&#x27;</span> + jadd + <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">                        f.write(j_str)      </span><br><span class="line">                        print(j_str)</span><br><span class="line">                <span class="keyword">except</span>:</span><br><span class="line">                    print(<span class="string">&quot;Error&quot;</span>)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Example</span></span><br><span class="line"><span class="comment"># POI category</span></span><br><span class="line">classArray=</span><br><span class="line">[<span class="string">&#x27;中餐厅&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;外国餐厅&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;小吃快餐店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;蛋糕甜品店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;咖啡厅&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;茶座&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;酒吧&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;星级酒店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;快捷酒店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;公寓式酒店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;民宿&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;购物中心&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;百货商场&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;超市&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;便利店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;家居建材&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;家电数码&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;商铺&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;市场&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;通讯营业厅&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;邮局&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;物流公司&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;售票处&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;洗衣店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;图文快印店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;照相馆&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;房产中介机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;公用事业&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;维修点&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;家政服务&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;殡葬服务&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;彩票销售点&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;宠物服务&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;报刊亭&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;公共厕所&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;步骑行专用道驿站&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;美容&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;美发&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;美甲&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;美体&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;公园&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;动物园&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;植物园&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;游乐园&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;博物馆&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;水族馆&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;海滨浴场&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;文物古迹&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;教堂&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;风景区&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;景点&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;寺庙&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;度假村&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;农家院&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;电影院&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;ktv&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;剧院&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;歌舞厅&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;网吧&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;游戏场所&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;洗浴按摩&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;休闲广场&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;体育场馆&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;极限运动场所&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;健身中心&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;高等院校&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;中学&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;小学&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;幼儿园&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;成人教育&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;亲子教育&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;特殊教育学校&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;留学中介机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;科研机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;培训机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;图书馆&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;科技馆&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;新闻出版&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;广播电视&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;艺术团体&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;美术馆&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;展览馆&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;文化宫&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;综合医院&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;专科医院&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;诊所&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;药店&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;体检机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;疗养院&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;急救中心&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;疾控中心&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;医疗器械&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;医疗保健&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;汽车销售&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;汽车维修&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;汽车美容&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;汽车配件&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;汽车租赁&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;汽车检测场&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;飞机场&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;火车站&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;地铁站&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;地铁线路&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;长途汽车站&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;公交车站&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;公交线路&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;港口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;停车场&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;加油加气站&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;服务区&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;收费站&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;桥&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;充电站&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;路侧停车位&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;普通停车位&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;接送点&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;银行&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;ATM&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;信用社&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;投资理财&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;典当行&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;写字楼&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;住宅区&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;宿舍&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;内部楼栋&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;公司&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;园区&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;农林园艺&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;厂矿&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;中央机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;各级政府&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;行政单位&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;公检法机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;涉外机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;党派团体&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;福利机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;政治教育机构&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;社会团体&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;民主党派&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;居民委员会&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;高速公路出口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;高速公路入口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;机场出口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;机场入口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;车站出口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;车站入口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;门&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;停车场出入口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;自行车高速出口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;自行车高速入口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;自行车高速出入口&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;岛屿&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;山峰&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;水系&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;省&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;省级城市&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;地级市&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;区县&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;商圈&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;乡镇&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;村庄&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Large rectangular coordinate</span></span><br><span class="line">lat_1=<span class="number">21.502705</span></span><br><span class="line">lon_1=<span class="number">110.321145</span></span><br><span class="line">lat_2=<span class="number">25.519951</span></span><br><span class="line">lon_2=<span class="number">116.220296</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Step</span></span><br><span class="line">las=<span class="number">0.2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Get 中餐厅 POI</span></span><br><span class="line">getPOIFromBaiduMap(lat_1, lon_1, lat_2, lon_2, las, classArray[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Get all categories of POI</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(classArray)):</span><br><span class="line">    print(<span class="string">&quot;-------------------Collecting&quot;</span>+classArray[i]+<span class="string">&quot;!---------------------------&quot;</span>)</span><br><span class="line">    getPOIFromBaiduMap(lat_1, lon_1, lat_2, lon_2, las, classArray[i])</span><br><span class="line">    print(<span class="string">&quot;-------------------&quot;</span> + classArray[i] + <span class="string">&quot;Collected-------------------------&quot;</span>)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -1123,102 +1217,6 @@ Slope=\frac{n×\sum_{i=1}^{n}{(i×M_{r,i})-(\sum_{i=1}^{n}i)(\sum_{i=1}^{n}M_{r,
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://siqi-dong.github.io/2020/10/20/Add-head-file-to-ascill/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Siqi Dong">
-      <meta itemprop="description" content="Data and tool support for GISer">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Siqi Dong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/20/Add-head-file-to-ascill/" class="post-title-link" itemprop="url">Add head file to ascill</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-10-20 15:15:58" itemprop="dateCreated datePublished" datetime="2020-10-20T15:15:58+08:00">2020-10-20</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-10-22 11:51:28" itemprop="dateModified" datetime="2020-10-22T11:51:28+08:00">2020-10-22</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/TextFile/" itemprop="url" rel="index"><span itemprop="name">TextFile</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addAsciiHeadFile</span>(<span class="params">asciiFolder</span>):</span></span><br><span class="line">    rootdir = os.path.join(asciiFolder)</span><br><span class="line">    <span class="keyword">for</span> (dirpath, dirnames, filenames) <span class="keyword">in</span> os.walk(rootdir):</span><br><span class="line">        <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">            <span class="keyword">if</span> os.path.splitext(filename)[<span class="number">1</span>] == <span class="string">&#x27;.txt&#x27;</span>:</span><br><span class="line">                asciiPath=asciiFolder+<span class="string">&quot;\\&quot;</span>+filename</span><br><span class="line">                <span class="keyword">with</span> open(asciiPath, <span class="string">&#x27;r+&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                    content = f.read()</span><br><span class="line">                    f.seek(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">                    <span class="comment"># head file content</span></span><br><span class="line">                    f.write(<span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + <span class="string">&#x27;XXX\n&#x27;</span> + content)</span><br><span class="line">                    <span class="keyword">print</span> asciiPath + <span class="string">&quot;done!&quot;</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
 
   
   <nav class="pagination">
@@ -1263,7 +1261,7 @@ Slope=\frac{n×\sum_{i=1}^{n}{(i×M_{r,i})-(\sum_{i=1}^{n}i)(\sum_{i=1}^{n}M_{r,
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1274,13 +1272,13 @@ Slope=\frac{n×\sum_{i=1}^{n}{(i×M_{r,i})-(\sum_{i=1}^{n}i)(\sum_{i=1}^{n}M_{r,
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">3k</span>
+    <span title="Symbols count total">4k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3 mins.</span>
+    <span title="Reading time total">4 mins.</span>
   </span>
 </div>
 <div class="busuanzi-count">
