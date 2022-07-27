@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"siqi-dong.github.io","root":"/","scheme":"Mist","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="&#96;&#96;&#96;python -- coding: utf-8 --import tifffile as tiffimport mathimport numpyfrom itertools import chainimg &#x3D; tiff.imread(‘tiffilePath’)listImg &#x3D; list(chain.from_iterable(img)) Filter out negative numbe">
+  <meta name="description" content="1234567891011121314151617# -*- coding: utf-8 -*-import tifffile as tiffimport mathimport numpyfrom itertools import chainimg &#x3D; tiff.imread(&amp;#x27;tiffilePath&amp;#x27;)listImg &#x3D; list(chain.from_iterable(im">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Get the quantile of raster image">
 <meta property="og:url" content="http://siqi-dong.github.io/2022/07/27/Get%20the%20quantile%20of%20raster%20image/index.html">
 <meta property="og:site_name" content="Siqi Dong&#39;s Blog">
-<meta property="og:description" content="&#96;&#96;&#96;python -- coding: utf-8 --import tifffile as tiffimport mathimport numpyfrom itertools import chainimg &#x3D; tiff.imread(‘tiffilePath’)listImg &#x3D; list(chain.from_iterable(img)) Filter out negative numbe">
+<meta property="og:description" content="1234567891011121314151617# -*- coding: utf-8 -*-import tifffile as tiffimport mathimport numpyfrom itertools import chainimg &#x3D; tiff.imread(&amp;#x27;tiffilePath&amp;#x27;)listImg &#x3D; list(chain.from_iterable(im">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-27T01:07:00.000Z">
-<meta property="article:modified_time" content="2022-07-27T01:28:56.752Z">
+<meta property="article:modified_time" content="2022-07-27T02:26:17.936Z">
 <meta property="article:author" content="Siqi Dong">
 <meta name="twitter:card" content="summary">
 
@@ -192,7 +192,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -204,7 +204,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#coding-utf-8"><span class="nav-number">1.</span> <span class="nav-text">-- coding: utf-8 --</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Filter-out-negative-numbers-optional"><span class="nav-number">2.</span> <span class="nav-text">Filter out negative numbers (optional)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5th-percentile"><span class="nav-number">3.</span> <span class="nav-text">5th percentile</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#95th-percentile"><span class="nav-number">4.</span> <span class="nav-text">95th percentile</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -301,7 +300,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-07-27 09:07:00 / Modified: 09:28:56" itemprop="dateCreated datePublished" datetime="2022-07-27T09:07:00+08:00">2022-07-27</time>
+      <time title="Created: 2022-07-27 09:07:00 / Modified: 10:26:17" itemprop="dateCreated datePublished" datetime="2022-07-27T09:07:00+08:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -328,7 +327,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>451</span>
+      <span>0</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -346,12 +345,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>```python</p>
-<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding: utf-8 --"></a>-<em>- coding: utf-8 -</em>-</h1><p>import tifffile as tiff<br>import math<br>import numpy<br>from itertools import chain<br>img = tiff.imread(‘tiffilePath’)<br>listImg = list(chain.from_iterable(img))</p>
-<h1 id="Filter-out-negative-numbers-optional"><a href="#Filter-out-negative-numbers-optional" class="headerlink" title="Filter out negative numbers (optional)"></a>Filter out negative numbers (optional)</h1><p>x = numpy.array([num for num in listImg if num &gt;= 0])<br>def percentile(data, perc: int):<br>    size = len(data)<br>    return sorted(data)[int(math.ceil((size * perc) / 100)) - 1]</p>
-<h1 id="5th-percentile"><a href="#5th-percentile" class="headerlink" title="5th percentile"></a>5th percentile</h1><p>print(“5th percentile：”+str(percentile(x, 5)))</p>
-<h1 id="95th-percentile"><a href="#95th-percentile" class="headerlink" title="95th percentile"></a>95th percentile</h1><p>print(“95th percentile：”+str(percentile(x, 95)))</p>
-
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> tifffile <span class="keyword">as</span> tiff</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> chain</span><br><span class="line">img = tiff.imread(<span class="string">&#x27;tiffilePath&#x27;</span>)</span><br><span class="line">listImg = list(chain.from_iterable(img))</span><br><span class="line"><span class="comment">#Filter out negative numbers (optional)</span></span><br><span class="line">x = numpy.array([num <span class="keyword">for</span> num <span class="keyword">in</span> listImg <span class="keyword">if</span> num &gt;= <span class="number">0</span>])</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">percentile</span>(<span class="params">data, perc: int</span>):</span></span><br><span class="line">    size = len(data)</span><br><span class="line">    <span class="keyword">return</span> sorted(data)[int(math.ceil((size * perc) / <span class="number">100</span>)) - <span class="number">1</span>]</span><br><span class="line">    </span><br><span class="line"><span class="comment">#5th percentile</span></span><br><span class="line">print(<span class="string">&quot;5th percentile：&quot;</span>+str(percentile(x, <span class="number">5</span>)))</span><br><span class="line"><span class="comment">#95th percentile</span></span><br><span class="line">print(<span class="string">&quot;95th percentile：&quot;</span>+str(percentile(x, <span class="number">95</span>)))</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -446,13 +440,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">4k</span>
+    <span title="Symbols count total">3k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4 mins.</span>
+    <span title="Reading time total">3 mins.</span>
   </span>
 </div>
 <div class="busuanzi-count">
